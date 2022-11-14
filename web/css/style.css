@@ -4,14 +4,17 @@ Auteur : Rémy Balland
 */
 
 /* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #0065fc;
   --primary-light: #deebff;
-  --back-grey: #f2f2f2;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --back-grey: #d9d9d9;
 }
 
 body {
@@ -25,7 +28,7 @@ li {
 }
 
 a {
-  color: black;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -33,23 +36,47 @@ i {
   color: var(--primary-color);
 }
 
+main {
+  margin: 3em;
+}
+
+input {
+  border: none;
+  color: black;
+  background-color: transparent;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
 .flex {
   display: flex;
 }
 
-/* Header */
+.titre {
+  margin-bottom: 10px;
+}
+
+/* 
+////////////////
+    HEADER
+////////////////
+*/
+
 .header {
   align-items: center;
-  padding: 0.75em;
 }
 
 .header img {
-  max-height: 1.5em;
-  padding: 0.5em;
+  max-height: 2em;
+  margin: 3em;
 }
 
 .header nav {
   margin-left: auto;
+  margin-right: 3em;
 }
 
 .header nav ul {
@@ -57,11 +84,156 @@ i {
 }
 
 .header nav ul li a {
-  padding-top: 34px;
   padding-inline: 1em;
+  border-top: 2px solid;
+  border-color: transparent;
+  padding-top: 3.4em;
 }
 
 .header nav ul li a:hover {
   color: var(--primary-color);
-  border-top: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* 
+//////////
+NAV
+SEARCH & FILTRES
+//////////
+*/
+/* Search */
+.search {
+  margin-block: 2em;
+  width: max-content;
+  border: 1px solid var(--back-grey);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.search input {
+  font-weight: 600;
+  font-size: large;
+  padding: 15px;
+  outline: none;
+  margin: 0;
+}
+
+.search input.submit {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.search label {
+  padding: 15px;
+  background-color: var(--back-grey);
+}
+
+.search label i {
+  color: black;
+}
+
+/* Filtres */
+
+.filtre {
+  margin-bottom: 3em;
+}
+
+.filtre,
+.filtre ul {
+  gap: 2em;
+  align-items: center;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: large;
+  padding-block: 15px;
+  padding-inline: 20px;
+  border: 2px solid var(--back-grey);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.btn i {
+  margin-right: 15px;
+  font-size: larger;
+}
+
+.btn:hover {
+  background-color: var(--primary-light);
+}
+
+.nav-filtre p.info {
+  align-items: center;
+  gap: 1em;
+}
+
+.nav-filtre p.info i {
+  display: grid;
+  place-content: center;
+  font-size: small;
+  width: 2em;
+  height: 2em;
+  border: 1px solid var(--back-grey);
+  border-radius: 50%;
+}
+
+/* 
+/////////////////
+MAIN CONTENT
+Section liste des hebergements dispo
+
+*/
+
+/* grille 3 colonnes
+1 carte par colone :
+  - img 
+  - nom
+  - prix
+  - note
+
+  2 lignes, 6 cartes
+*/
+
+section {
+  margin-block: 3em;
+  gap: 3em;
+}
+
+section .list-annonce {
+  padding: 2em;
+  background-color: var(--back-grey);
+  border-radius: 20px;
+}
+
+.grille-annonce {
+  display: grid;
+  grid: auto / 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+.card-annonce img {
+  width: 100%;
+  height: 58%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-annonce {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  background-color: #fff;
+  border-radius: 20px;
+  height: max-content;
+}
+
+.card-annonce .descri {
+  padding: 1em;
+}
+
+.card-annonce .descri > * {
+  padding-top: 5px;
 }
