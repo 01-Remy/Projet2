@@ -97,7 +97,6 @@ input {
 
 /* 
 //////////
-NAV
 SEARCH & FILTRES
 //////////
 */
@@ -187,19 +186,13 @@ Section liste des hebergements dispo
 
 */
 
-/* grille 3 colonnes
-1 carte par colone :
-  - img 
-  - nom
-  - prix
-  - note
-
-  2 lignes, 6 cartes
-*/
-
 section {
   margin-block: 3em;
   gap: 3em;
+}
+
+section .list-annonce:nth-child(1) {
+  width: 80%;
 }
 
 section .list-annonce {
@@ -212,28 +205,66 @@ section .list-annonce {
   display: grid;
   grid: auto / 1fr 1fr 1fr;
   gap: 2em;
-}
-
-.card-annonce img {
-  width: 100%;
-  height: 58%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  padding-top: 10px;
 }
 
 .card-annonce {
   display: flex;
   flex-direction: column;
-  padding: 2%;
   background-color: #fff;
   border-radius: 20px;
-  height: max-content;
+  height: 200px;
+}
+
+.card-annonce img {
+  width: 100%;
+  height: 63%;
+  border-radius: 20px 20px 0 0;
+  border: 5px solid white;
+  object-fit: cover;
 }
 
 .card-annonce .descri {
-  padding: 1em;
+  padding-left: 15px;
+  font-size: small;
 }
 
 .card-annonce .descri > * {
   padding-top: 5px;
+}
+
+/* Populaire */
+
+.populaire .titre {
+  width: 100%;
+  align-items: center;
+}
+
+.populaire .titre i {
+  margin-left: auto;
+}
+
+.populaire .grille-annonce {
+  grid: auto / 1fr;
+}
+
+.list-annonce.populaire .card-annonce {
+  flex-direction: row;
+  height: 144px;
+}
+.list-annonce.populaire .card-annonce img {
+  height: 100%;
+  width: 40%;
+  border-radius: 20px 0 0 20px;
+}
+
+.list-annonce.populaire .card-annonce .descri {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  max-width: 60%;
+}
+
+.list-annonce.populaire .card-annonce .descri ul {
+  margin-top: auto;
 }
