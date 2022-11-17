@@ -1,6 +1,440 @@
+/* Feuille de style Booki.com
+
+Auteur : Rémy Balland
+*/
+
+/* Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #0065fc;
   --primary-light: #deebff;
-  --back-grey: #f2f2f2;
-  font-family: "Raleway", sans-serif;
+  --back-grey: #d9d9d9;
+}
+
+body {
+  max-width: 1440px;
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+i {
+  color: var(--primary-color);
+}
+
+main {
+  margin: 3em;
+}
+
+input {
+  border: none;
+  color: black;
+  background-color: transparent;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+button {
+  border: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.titre {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 1.5em;
+  }
+}
+/* 
+////////////////
+    HEADER
+////////////////
+*/
+
+.header {
+  align-items: center;
+}
+
+.header img {
+  max-height: 2em;
+  margin: 3em;
+}
+
+.header nav {
+  margin-left: auto;
+  margin-right: 3em;
+}
+
+.header nav ul {
+  gap: 1em;
+}
+
+.header nav ul li a {
+  padding-inline: 1em;
+  border-top: 2px solid;
+  border-color: transparent;
+  padding-top: 3.4em;
+}
+
+.header nav ul li:hover a {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+  .header img {
+    margin: 2em;
+  }
+
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header nav {
+    margin: 0;
+    width: 100%;
+  }
+
+  .header nav ul {
+    gap: 0;
+  }
+
+  .header nav ul li {
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid var(--back-grey);
+    padding-bottom: 1.7em;
+  }
+
+  .header nav ul li a {
+    border-top: none;
+    padding: 0;
+  }
+
+  .header nav ul li:hover {
+    border-color: var(--primary-color);
+  }
+}
+
+/* 
+//////////
+SEARCH & FILTRES
+//////////
+*/
+/* Search */
+.search {
+  margin-block: 2em;
+  width: max-content;
+  border: 1px solid var(--back-grey);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.search input,
+.search button {
+  font-weight: 600;
+  font-size: large;
+  padding: 15px;
+  outline: none;
+  margin: 0;
+}
+
+.search button {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.search button,
+.search button i {
+  color: #fff;
+}
+
+.search button i {
+  display: none;
+}
+
+.search label {
+  display: grid;
+  place-content: center;
+  padding: 15px;
+  background-color: var(--back-grey);
+}
+
+.search label i {
+  color: black;
+}
+
+/* Filtres */
+
+.filtre {
+  margin-bottom: 3em;
+}
+
+.filtre,
+.filtre ul {
+  gap: 2em;
+  align-items: center;
+}
+
+.filtre ul {
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: max-content;
+  font-weight: 600;
+  font-size: large;
+  padding-block: 15px;
+  padding-inline: 20px;
+  border: 2px solid var(--back-grey);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.btn i {
+  margin-right: 15px;
+  font-size: larger;
+}
+
+.btn:hover {
+  background-color: var(--primary-light);
+}
+
+.nav-filtre p.info {
+  align-items: center;
+  gap: 1em;
+}
+
+.nav-filtre p.info i {
+  display: grid;
+  place-content: center;
+  font-size: small;
+  width: 2em;
+  height: 2em;
+  border: 1px solid var(--back-grey);
+  border-radius: 50%;
+}
+
+@media (max-width: 1050px) {
+  .filtre {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 992px) {
+  .filtre {
+    gap: 1em;
+  }
+
+  .filtre h2 {
+    font-size: medium;
+  }
+
+  .btn {
+    font-size: small;
+  }
+}
+
+@media (max-width: 768px) {
+  /* search */
+
+  .search,
+  .search input,
+  .search ::placeholder,
+  .search button {
+    font-size: small;
+  }
+
+  .search button span {
+    display: none;
+  }
+
+  .search button i {
+    display: flex;
+  }
+  /* Filtres */
+  .filtre ul {
+    flex-wrap: wrap;
+  }
+
+  .filtre ul li {
+    width: 45%;
+  }
+}
+
+@media (max-width: 520px) {
+  .filtre ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .filtre ul li {
+    width: 100%;
+  }
+}
+/* 
+/////////////////
+MAIN CONTENT
+Section liste des hebergements dispo
+
+*/
+
+section {
+  margin-block: 3em;
+  gap: 3em;
+}
+
+section .list-annonce:nth-child(1) {
+  width: 80%;
+}
+
+section .list-annonce {
+  padding: 2em;
+  background-color: var(--back-grey);
+  border-radius: 20px;
+}
+
+.grille-annonce {
+  display: grid;
+  grid: auto / 1fr 1fr 1fr;
+  gap: 2em;
+  padding-top: 10px;
+}
+
+.card-annonce {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  height: 200px;
+}
+
+.card-annonce img {
+  width: 100%;
+  height: 63%;
+  border-radius: 20px 20px 0 0;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+.card-annonce .descri {
+  padding-left: 15px;
+  font-size: small;
+}
+
+.card-annonce .descri > * {
+  padding-top: 5px;
+}
+
+/* Populaire */
+
+.populaire .titre {
+  width: 100%;
+  align-items: center;
+}
+
+.populaire .titre i {
+  margin-left: auto;
+}
+
+.populaire .grille-annonce {
+  grid: auto / 1fr;
+}
+
+.list-annonce.populaire .card-annonce {
+  flex-direction: row;
+  height: 144px;
+}
+.list-annonce.populaire .card-annonce img {
+  height: 100%;
+  width: 40%;
+  border-radius: 20px 0 0 20px;
+}
+
+.list-annonce.populaire .card-annonce .descri {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  max-width: 60%;
+}
+
+.list-annonce.populaire .card-annonce .descri ul {
+  margin-top: auto;
+}
+
+@media (max-width: 992px) {
+  .section-annonce {
+    flex-direction: column;
+  }
+
+  /* hebergement */
+  section.section-annonce .list-annonce:nth-child(1) {
+    width: auto;
+  }
+
+  /* Populaire */
+
+  section.section-annonce .populaire .grille-annonce {
+    grid: auto / 1fr 1fr 1fr;
+  }
+  .list-annonce.populaire .card-annonce .descri {
+    padding: 8px;
+  }
+  .list-annonce.populaire .card-annonce .descri ul {
+    margin-top: auto;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hebergement */
+  .grille-annonce {
+    grid: auto / 1fr;
+  }
+  /* Populaire */
+  section.section-annonce .populaire .grille-annonce {
+    grid: auto / 1fr;
+  }
+  .list-annonce.populaire .card-annonce .descri {
+    padding: 15px;
+  }
+  .list-annonce.populaire .card-annonce .descri ul {
+    margin-top: auto;
+  }
 }
