@@ -199,7 +199,7 @@ SEARCH & FILTRES
 /* Filtres */
 
 .filtre {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .filtre,
@@ -488,10 +488,30 @@ ACTIVITES
 }
 
 .grille-activite .card h3 {
+  font-size: medium;
   margin-top: 10px;
   padding-left: 1em;
 }
 
+@media (max-width: 992px) {
+  .grille-activite .card {
+    height: 270px;
+  }
+
+  .grille-activite .card img {
+    height: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .grille-activite {
+    grid: auto / 1fr;
+  }
+
+  .grille-activite .card {
+    height: 190px;
+  }
+}
 /* 
 ///////////
 FOOTER
@@ -502,6 +522,10 @@ FOOTER
   margin: 3em 3em 0;
   padding: 45px 70px;
   background-color: var(--back-light-grey);
+}
+
+.footer .titre {
+  font-size: large;
 }
 
 .footer > div {
@@ -515,4 +539,33 @@ FOOTER
 
 .footer > div > ul li {
   padding-block: 5px;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    justify-content: space-between;
+    font-size: 15px;
+  }
+
+  .footer .titre {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 45px 2em;
+    margin: 0;
+    gap: 2em;
+    font-size: 1em;
+  }
+
+  .footer .titre {
+    font-size: large;
+  }
+
+  .footer > div {
+    width: 100%;
+  }
 }
