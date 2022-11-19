@@ -16,6 +16,7 @@ Auteur : Rémy Balland
   --primary-color: #0065fc;
   --primary-light: #deebff;
   --back-grey: #d9d9d9;
+  --back-light-grey: #f2f2f2;
 }
 
 body {
@@ -83,6 +84,7 @@ button {
 .header img {
   max-height: 2em;
   margin: 3em;
+  width: 60px;
 }
 
 .header nav {
@@ -98,7 +100,7 @@ button {
   padding-inline: 1em;
   border-top: 2px solid;
   border-color: transparent;
-  padding-top: 3.4em;
+  padding-top: 3em;
 }
 
 .header nav ul li:hover a {
@@ -132,12 +134,13 @@ button {
     width: 50%;
     text-align: center;
     border-bottom: 2px solid var(--back-grey);
-    padding-bottom: 1.7em;
   }
 
   .header nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 0 0 1.7em 0;
     border-top: none;
-    padding: 0;
   }
 
   .header nav ul li:hover {
@@ -154,7 +157,7 @@ SEARCH & FILTRES
 .search {
   margin-block: 2em;
   width: max-content;
-  border: 1px solid var(--back-grey);
+  border: 1px solid var(--back-light-grey);
   border-radius: 15px;
   overflow: hidden;
 }
@@ -186,7 +189,7 @@ SEARCH & FILTRES
   display: grid;
   place-content: center;
   padding: 15px;
-  background-color: var(--back-grey);
+  background-color: var(--back-light-grey);
 }
 
 .search label i {
@@ -206,7 +209,6 @@ SEARCH & FILTRES
 }
 
 .filtre ul {
-  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
 }
@@ -251,9 +253,8 @@ SEARCH & FILTRES
 }
 
 @media (max-width: 1050px) {
-  .filtre {
-    flex-direction: column;
-    align-items: flex-start;
+  .btn {
+    padding: 10px 16px;
   }
 }
 
@@ -268,12 +269,12 @@ SEARCH & FILTRES
 
   .btn {
     font-size: small;
+    padding: 8px 12px;
   }
 }
 
 @media (max-width: 768px) {
   /* search */
-
   .search,
   .search input,
   .search ::placeholder,
@@ -288,9 +289,16 @@ SEARCH & FILTRES
   .search button i {
     display: flex;
   }
+
   /* Filtres */
+  .filtre {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .filtre ul {
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .filtre ul li {
@@ -311,8 +319,9 @@ SEARCH & FILTRES
 /* 
 /////////////////
 MAIN CONTENT
-Section liste des hebergements dispo
+////////////////
 
+- Section hebergement
 */
 
 section {
@@ -326,7 +335,7 @@ section .list-annonce:nth-child(1) {
 
 section .list-annonce {
   padding: 2em;
-  background-color: var(--back-grey);
+  background-color: var(--back-light-grey);
   border-radius: 20px;
 }
 
@@ -334,7 +343,7 @@ section .list-annonce {
   display: grid;
   grid: auto / 1fr 1fr 1fr;
   gap: 2em;
-  padding-top: 10px;
+  padding-top: 1em;
 }
 
 .card-annonce {
@@ -343,6 +352,7 @@ section .list-annonce {
   background-color: #fff;
   border-radius: 20px;
   height: 200px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-annonce img {
@@ -360,6 +370,14 @@ section .list-annonce {
 
 .card-annonce .descri > * {
   padding-top: 5px;
+}
+
+.list-annonce button {
+  margin-top: 2em;
+  background-color: transparent;
+  font-size: large;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /* Populaire */
@@ -398,6 +416,12 @@ section .list-annonce {
   margin-top: auto;
 }
 
+@media (max-width: 1248px) {
+  .hebergement .grille-annonce {
+    grid: auto / 1fr 1fr;
+  }
+}
+
 @media (max-width: 992px) {
   .section-annonce {
     flex-direction: column;
@@ -407,7 +431,9 @@ section .list-annonce {
   section.section-annonce .list-annonce:nth-child(1) {
     width: auto;
   }
-
+  .hebergement .grille-annonce {
+    grid: auto / 1fr 1fr 1fr;
+  }
   /* Populaire */
 
   section.section-annonce .populaire .grille-annonce {
@@ -424,7 +450,7 @@ section .list-annonce {
 
 @media (max-width: 768px) {
   /* Hebergement */
-  .grille-annonce {
+  .hebergement .grille-annonce {
     grid: auto / 1fr;
   }
   /* Populaire */
@@ -437,4 +463,56 @@ section .list-annonce {
   .list-annonce.populaire .card-annonce .descri ul {
     margin-top: auto;
   }
+}
+
+/* 
+/////////////
+ACTIVITES 
+////////////
+*/
+
+.grille-activite {
+  display: grid;
+  grid: auto / 1fr 1fr 1fr 1fr;
+  gap: 2em;
+  padding-top: 1em;
+}
+
+.grille-activite .card {
+  height: 444px;
+}
+
+.grille-activite .card img {
+  border: none;
+  height: 90%;
+}
+
+.grille-activite .card h3 {
+  margin-top: 10px;
+  padding-left: 1em;
+}
+
+/* 
+///////////
+FOOTER
+//////////
+*/
+
+.footer {
+  margin: 3em 3em 0;
+  padding: 45px 70px;
+  background-color: var(--back-light-grey);
+}
+
+.footer > div {
+  width: 33%;
+}
+
+.footer > div,
+.footer > div ul {
+  flex-direction: column;
+}
+
+.footer > div > ul li {
+  padding-block: 5px;
 }
