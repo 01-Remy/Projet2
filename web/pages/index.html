@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Trouvez l'hébergement qui vous correspond et découvrez les activités proches pour vos meilleures vacances avec Booki">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -14,28 +16,14 @@
 </head>
 
 <body>
-    <!--
-        Icones fontawesome
-    
-        <i class="fa-solid fa-dog"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-person"></i>
-        <i class="fa-solid fa-info"></i>
-        <i class="fa-solid fa-chart-line"></i>
-        <i class="fa-solid fa-money-bill-wave"></i>
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-solid fa-location-dot"></i>
-        <i class="fa-solid fa-magnifying-glass"></i>
-    -->
-
     <header class="flex header">
         <div>
             <img src="../assets/images/logo/Booki.png" alt="Logo Booki">
         </div>
         <nav>
             <ul class="flex">
-                <li><a href="#">Hébergements</a></li>
-                <li><a href="#">Activités</a></li>
+                <li><a href="#hebergement">Hébergements</a></li>
+                <li><a href="#activite">Activités</a></li>
             </ul>
         </nav>
     </header>
@@ -65,8 +53,8 @@
             </p>
         </nav>
 
-        <section class="flex section-annonce">
-            <div class="list-annonce">
+        <section class="flex section-annonce" id="hebergement">
+            <div class="list-annonce hebergement">
                 <h2 class="titre">Hébergements à Marseille</h2>
                 <div class="grille-annonce">
                     <a class="card-annonce" href="#" title="Auberge La Canebière">
@@ -76,7 +64,6 @@
                             <h3>Auberge La Canebière</h3>
                             <p>Nuit à partir de 25<b>€</b></p>
                             <ul>
-                                <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -95,7 +82,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
@@ -110,7 +97,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
@@ -125,7 +112,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
@@ -140,7 +127,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
@@ -155,12 +142,12 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
                 </div>
-                <button>Afficher plus</button>
+                <button type="button">Afficher plus</button>
             </div>
             <div class="list-annonce populaire">
                 <div class="flex">
@@ -178,7 +165,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
@@ -192,7 +179,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
@@ -207,7 +194,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
+
                             </ul>
                         </div>
                     </a>
@@ -216,7 +203,57 @@
 
             </div>
         </section>
+
+        <section id="activite">
+            <h2 class="titre">Activités à Marseille</h2>
+            <div class="grille-activite">
+                <a href="#" title="Activités au Vieux-Port" class="card card-annonce">
+                    <img src="../assets/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                        alt="Photo du Vieux-Port">
+                    <h3>Vieux-Port</h3>
+                </a>
+                <a href="#" title="Activités au Fort de Pornègues" class="card card-annonce">
+                    <img src="../assets/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                        alt="photo du Fort de Pornègues">
+                    <h3>Fort de Pornègues</h3>
+                </a>
+                <a href="#" title="Activités au Parce national des Calanques" class="card card-annonce">
+                    <img src="../assets/images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                        alt="photo du Parc national des Calanques">
+                    <h3>Parc national des Calanques</h3>
+                </a>
+                <a href="#" title="Activités à Notre-Dame-de-la-Garde" class="card card-annonce">
+                    <img src="../assets/images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                        alt="photo de Notre-Dame-de-la-Garde">
+                    <h3>Notre-Dame-de-la-Garde</h3>
+                </a>
+            </div>
+        </section>
     </main>
+    <footer class="flex footer">
+        <div class="flex">
+            <h2 class="titre">À propos</h2>
+            <ul class="flex">
+                <li><a href="#" title="Fonctionnement du site">Fonctionnement du site</a></li>
+                <li><a href="#" title="Conditions générales">Conditions générales</a></li>
+                <li><a href="#" title="Données de confidentialité">Données de confidentialité</a></li>
+            </ul>
+        </div>
+        <div class="flex">
+            <h2 class="titre">Nos hébergement</h2>
+            <ul class="flex">
+                <li><a href="#" title="Charte qualité">Charte qualité</a></li>
+                <li><a href="#" title="Proposer vos hôtels">Proposer vos hôtels</a></li>
+            </ul>
+        </div>
+        <div class="flex">
+            <h2 class="titre">Assistance</h2>
+            <ul class="flex">
+                <li><a href="#" title="Centre d'aide">Centre d'aide</a></li>
+                <li><a href="#" title="Nous contacter">Nous contacter</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>
