@@ -21,8 +21,13 @@ Auteur : Rémy Balland
 
 body {
   max-width: 1440px;
+  min-width: 310px;
   margin-inline: auto;
   overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.75em;
 }
 
 li {
