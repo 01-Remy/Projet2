@@ -459,6 +459,14 @@ section .list-annonce {
     grid: auto / 1fr;
   }
   /* Populaire */
+  section.section-annonce .populaire {
+    order: 1;
+  }
+
+  section.section-annonce .hebergement {
+    order: 2;
+  }
+
   section.section-annonce .populaire .grille-annonce {
     grid: auto / 1fr;
   }
