@@ -113,6 +113,11 @@ button {
   padding-top: 3em;
 }
 
+.header nav ul li,
+.header nav ul li a {
+  transition: all 0.1s ease;
+}
+
 .header nav ul li:hover a {
   color: var(--primary-color);
   border-color: var(--primary-color);
