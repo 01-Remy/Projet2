@@ -26,8 +26,13 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-size: 1.75em;
+h1,
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 16px;
 }
 
 li {
@@ -69,6 +74,7 @@ button {
 
 .titre {
   margin-bottom: 10px;
+  font-size: 22px;
 }
 
 @media (max-width: 768px) {
@@ -176,11 +182,15 @@ SEARCH & FILTRES
 
 .search input,
 .search button {
-  font-weight: 600;
-  font-size: large;
   padding: 15px;
   outline: none;
   margin: 0;
+}
+.search input,
+.search button,
+.search input::placeholder {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .search button {
@@ -215,6 +225,11 @@ SEARCH & FILTRES
   flex-wrap: wrap;
 }
 
+.filtre .titre {
+  margin: 0;
+  font-size: 18px;
+}
+
 .filtre,
 .filtre ul {
   gap: 2em;
@@ -231,8 +246,8 @@ SEARCH & FILTRES
   align-items: center;
   text-align: center;
   min-width: max-content;
-  font-weight: 600;
-  font-size: large;
+  font-weight: 700;
+  font-size: 17px;
   padding-block: 15px;
   padding-inline: 20px;
   border: 2px solid var(--back-grey);
@@ -244,7 +259,7 @@ SEARCH & FILTRES
 
 .btn i {
   margin-right: 15px;
-  font-size: larger;
+  font-size: 22px;
 }
 
 .btn:hover {
@@ -296,6 +311,7 @@ SEARCH & FILTRES
 
   .search button i {
     display: flex;
+    font-size: 17px;
   }
 
   /* Filtres */
@@ -316,26 +332,21 @@ SEARCH & FILTRES
 }
 
 @media (max-width: 576px) {
-  .filtre ul {
-    justify-content: unset;
-  }
-
   .filtre ul li {
     width: 46%;
+    min-width: 150px;
   }
   .btn {
-    font-size: 12px;
+    font-size: 11px;
+    padding-block: 18px;
   }
   .btn i {
-    margin-right: 4px;
+    margin-right: 5px;
+    font-size: 20px;
   }
   .nav-filtre .info i {
     align-self: flex-start;
   }
-
-  /* .nav-filtre .info {
-    font-size: 14px;
-  } */
 }
 
 /* 
@@ -413,6 +424,7 @@ section .list-annonce.populaire {
 
 .populaire .titre i {
   margin-left: auto;
+  font-size: 18px;
 }
 
 .populaire .grille-annonce {
@@ -530,7 +542,6 @@ ACTIVITES
 }
 
 .grille-activite .card h3 {
-  font-size: medium;
   margin-top: 10px;
   padding-left: 1em;
 }
@@ -568,7 +579,7 @@ FOOTER
 }
 
 .footer .titre {
-  font-size: large;
+  font-size: 18px;
 }
 
 .footer > div {
