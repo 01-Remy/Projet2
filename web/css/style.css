@@ -1,9 +1,39 @@
-/* Feuille de style Booki.com
+/* 
+== Feuille de style Booki.com ==
 
 Auteur : Rémy Balland
+
+Breakpoints : 
+  - small desktop : 1200px
+  - tablette : 992px
+  - mobile : 768px
+  - small mobile : 576px
+
+Index::
+
+  1 - RESETS
+
+  2 - HEADER
+
+  3 - SEARCH & FILTRES
+    \_search
+    \_filtres
+
+  4 - MAIN CONTENT
+    \_hebergement
+    \_populaire
+
+  5 - ACTIVITES
+
+  6 - FOOTER
+
 */
 
-/* Resets */
+/* 
+=========
+RESETS 
+=========
+*/
 
 * {
   margin: 0;
@@ -87,10 +117,11 @@ button {
     margin-inline: 1.5em;
   }
 }
+
 /* 
-////////////////
+==============
     HEADER
-////////////////
+==============
 */
 
 .header {
@@ -167,11 +198,13 @@ button {
 }
 
 /* 
-//////////
+==================
 SEARCH & FILTRES
-//////////
+==================
 */
+
 /* Search */
+
 .search {
   margin-block: 2em;
   width: max-content;
@@ -298,6 +331,7 @@ SEARCH & FILTRES
 
 @media (max-width: 768px) {
   /* search */
+
   .search,
   .search input,
   .search ::placeholder,
@@ -315,6 +349,7 @@ SEARCH & FILTRES
   }
 
   /* Filtres */
+
   .filtre {
     flex-direction: column;
     align-items: flex-start;
@@ -350,17 +385,17 @@ SEARCH & FILTRES
 }
 
 /* 
-/////////////////
+================
 MAIN CONTENT
-////////////////
-
-- Section hebergement
+================
 */
 
 section {
   margin-block: 3em;
   gap: 3em;
 }
+
+/* hebergement */
 
 section .list-annonce.hebergement {
   width: 68%;
@@ -414,6 +449,7 @@ section .list-annonce {
 }
 
 /* Populaire */
+
 section .list-annonce.populaire {
   width: 28%;
 }
@@ -470,16 +506,21 @@ section .list-annonce.populaire {
   }
 
   /* hebergement */
+
   .hebergement .grille-annonce {
     grid: auto / 1fr 1fr 1fr;
   }
+
   /* Populaire */
+
   section.section-annonce .populaire .grille-annonce {
     grid: auto / 1fr 1fr 1fr;
   }
+
   .list-annonce.populaire .card-annonce .descri {
     padding: 8px;
   }
+
   .list-annonce.populaire .card-annonce .descri ul {
     margin-top: auto;
     margin-bottom: 4px;
@@ -490,14 +531,19 @@ section .list-annonce.populaire {
   .section-annonce {
     margin-inline: 0;
   }
+
   section .list-annonce {
     padding-inline: 1.5em;
   }
+
   /* Hebergement */
+
   .hebergement .grille-annonce {
     grid: auto / 1fr;
   }
+
   /* Populaire */
+
   section.section-annonce .populaire {
     order: 1;
     border-radius: 0;
@@ -520,9 +566,9 @@ section .list-annonce.populaire {
 }
 
 /* 
-/////////////
+============
 ACTIVITES 
-////////////
+============
 */
 
 .grille-activite {
@@ -567,9 +613,9 @@ ACTIVITES
 }
 
 /* 
-///////////
+===========
 FOOTER
-//////////
+===========
 */
 
 .footer {
