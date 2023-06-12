@@ -6,8 +6,8 @@ Le projet aborde une approche Desktop-first. Les différentes maquettes sont dis
 
 https://www.figma.com/file/aen32jonHhD7JnIEL2b3sE/Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?node-id=3%3A0&t=E0B1gOQViUVUpCPB-0
 
-Le code du rendu est disponnible sur GitHub :
+Repo GitHub : https://github.com/01-Remy/Projet2
 
-https://github.com/01-Remy/Projet2
+GitHub page : https://01-remy.github.io/Projet2/
 
 Auteur : Rémy Balland
